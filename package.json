@@ -1,0 +1,49 @@
+{
+  "name": "issue-proof",
+  "version": "0.1.0",
+  "description": "Turn noisy GitHub issues into maintainer-ready evidence.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Bishoy Marcus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bishoymarcus/issue-proof.git"
+  },
+  "homepage": "https://github.com/bishoymarcus/issue-proof#readme",
+  "bugs": {
+    "url": "https://github.com/bishoymarcus/issue-proof/issues"
+  },
+  "keywords": [
+    "github-action",
+    "issue-triage",
+    "maintainers",
+    "open-source",
+    "codex",
+    "cli"
+  ],
+  "bin": {
+    "issue-proof": "./dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "action.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test test/*.test.js",
+    "check": "npm run test && npm pack --dry-run",
+    "prepublishOnly": "npm run check"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

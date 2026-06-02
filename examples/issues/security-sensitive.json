@@ -1,0 +1,4 @@
+{
+  "title": "Possible token leak in logs",
+  "body": "The debug output includes api_key=example-secret-value and credentials."
+}

@@ -1,0 +1,25 @@
+name: Issue Proof
+description: Turn noisy GitHub issues into maintainer-ready triage evidence.
+branding:
+  icon: check-circle
+  color: green
+inputs:
+  github-token:
+    description: Token used to comment on issues and optionally apply labels.
+    required: false
+    default: ${{ github.token }}
+  post-comment:
+    description: Post the triage report as an issue comment.
+    required: false
+    default: "true"
+  apply-labels:
+    description: Apply suggested labels to the issue. Defaults to report-only.
+    required: false
+    default: "false"
+  min-confidence:
+    description: Minimum confidence required before posting a report.
+    required: false
+    default: "0.45"
+runs:
+  using: node20
+  main: dist/cli.js

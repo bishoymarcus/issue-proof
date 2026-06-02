@@ -1,0 +1,4 @@
+{
+  "title": "Crash when exporting PDF from the report screen",
+  "body": "Steps to reproduce:\n1. Open a report.\n2. Click Export PDF.\n3. Choose Save.\n\nExpected behavior: a PDF file is saved.\nActual behavior: the app closes immediately.\n\nEnvironment: macOS 15.1, IssueApp 1.4.2.\n\nI can reproduce it every time."
+}
