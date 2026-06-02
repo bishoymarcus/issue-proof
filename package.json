@@ -1,6 +1,6 @@
 {
   "name": "issue-proof",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Turn noisy GitHub issues into maintainer-ready evidence.",
   "type": "module",
   "license": "MIT",

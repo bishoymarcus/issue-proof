@@ -37,7 +37,7 @@ jobs:
   issue-proof:
     runs-on: ubuntu-latest
     steps:
-      - uses: bishoymarcus/issue-proof@v0.1.0
+      - uses: bishoymarcus/issue-proof@v0.1.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           post-comment: "true"

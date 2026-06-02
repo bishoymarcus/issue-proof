@@ -176,7 +176,7 @@ jobs:
   issue-proof:
     runs-on: ubuntu-latest
     steps:
-      - uses: bishoymarcus/issue-proof@v0.1.0
+      - uses: bishoymarcus/issue-proof@v0.1.1
         with:
           github-token: \${{ secrets.GITHUB_TOKEN }}
           post-comment: "true"
@@ -242,8 +242,11 @@ function flagString(args: ParsedArgs, name: string): string | undefined {
 }
 
 function input(name: string): string | undefined {
-  const key = `INPUT_${name.toUpperCase().replace(/-/g, "_")}`;
-  return process.env[key];
+  const upperName = name.toUpperCase();
+  return (
+    process.env[`INPUT_${upperName.replace(/-/g, "_")}`] ??
+    process.env[`INPUT_${upperName}`]
+  );
 }
 
 function booleanInput(args: ParsedArgs, name: string, fallback: boolean): boolean {
